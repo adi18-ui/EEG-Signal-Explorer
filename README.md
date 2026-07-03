@@ -15,7 +15,6 @@ An interactive web application for loading, visualizing, and analyzing Electroen
 │   ├── topomap.py          # Topographical maps for spatial distribution of power
 │   ├── artifacts.py        # Artifact detection and filtering (ICA, ocular artifacts)
 │   └── report.py           # PDF/HTML export and report generation
-├── assets/                 # Custom styling, images, and other assets
 └── outputs/                # Generated reports, processed files, and downloads
 ```
 
@@ -26,7 +25,7 @@ An interactive web application for loading, visualizing, and analyzing Electroen
 3. **Interactive Signal Viewer**: Scroll through EEG channels, adjust scaling, filtering (lowpass, highpass, notch), and flag bad channels.
 4. **Spectral Analysis**: Compute and plot Power Spectral Density (PSD) and spectrograms.
 5. **Topographical Maps**: View interactive 2D topomaps of specific frequency bands (Delta, Theta, Alpha, Beta, Gamma).
-6. **Artifact Management**: Visualise bad epochs, apply basic filters, and handle ocular or muscular artifacts.
+
 7. **Report Generator**: Compile visualization findings into a downloadable report.
 
 ## Setup and Installation
