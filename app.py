@@ -62,9 +62,8 @@ if file_path is not None:
         ]
     )
 
-    # --------------------------------------------------
+
     # OVERVIEW
-    # --------------------------------------------------
 
     if page == "Overview":
 
@@ -111,9 +110,8 @@ if file_path is not None:
             use_container_width=True
         )
 
-    # --------------------------------------------------
+
     # SIGNAL VIEWER
-    # --------------------------------------------------
 
     elif page == "Signal Viewer":
 
@@ -150,9 +148,8 @@ if file_path is not None:
             use_container_width=True
         )
 
-    # --------------------------------------------------
+
     # FREQUENCY
-    # --------------------------------------------------
 
     elif page == "Frequency Analysis":
 
@@ -192,9 +189,8 @@ if file_path is not None:
             f"Dominant Band: {dominant}"
         )
 
-    # --------------------------------------------------
+
     # SPECTROGRAM
-    # --------------------------------------------------
 
     elif page == "Spectrogram":
 
@@ -239,7 +235,7 @@ if file_path is not None:
                     "Beta (13 - 30 Hz)",
                     "Gamma (30 - 45 Hz)"
                 ],
-                index=2  # Default to Alpha
+                index=2 
             )
             # Extract clean band name
             band = band_selection.split(" ")[0]
@@ -258,10 +254,9 @@ if file_path is not None:
             scale_option = st.selectbox(
                 "Scale (µV)",
                 [5, 10, 20, 50, "Auto"],
-                index=1  # Default to 10 µV
+                index=1 
             )
             
-            # Show color scale legend
             max_volt_disp = 10.0 if scale_option == "Auto" else scale_option
             st.markdown(
                 f"""
@@ -284,9 +279,9 @@ if file_path is not None:
                 index=0
             )
 
-        # Plot based on view mode
         if view_mode == "Brain":
-            # Interactive Plotly Brain topomap
+            
+            # Plotly Brain map
             auto_scale = (scale_option == "Auto")
             max_volt = 10.0 if auto_scale else float(scale_option)
             fig = topo.plot_brain_topomap(
@@ -300,11 +295,10 @@ if file_path is not None:
                 use_container_width=True
             )
         else:
-            # Existing standard MNE 2D topomap
+
             image_path = topo.save_topomap(band)
             st.image(image_path)
 
-        # Activity summary
         summary = topo.get_band_summary(band)
         
         col_sum1, col_sum2 = st.columns(2)
@@ -313,4 +307,4 @@ if file_path is not None:
         with col_sum2:
             st.warning(f"📉 **Lowest Activity:** Channel **{summary['lowest_channel']}** ({summary['lowest_power']:.2e} V²/Hz)")
 
-
+
