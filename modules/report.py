@@ -48,9 +48,7 @@ class EEGReportGenerator:
             Spacer(1, 12)
         )
 
-        # -------------------------
         # Dataset Overview
-        # -------------------------
 
         elements.append(
             Paragraph(
@@ -76,9 +74,7 @@ class EEGReportGenerator:
             Spacer(1, 10)
         )
 
-        # -------------------------
         # Quality Section
-        # -------------------------
 
         elements.append(
             Paragraph(
@@ -105,9 +101,7 @@ class EEGReportGenerator:
             Spacer(1, 15)
         )
 
-        # -------------------------
         # Band Powers
-        # -------------------------
 
         elements.append(
             Paragraph(
@@ -136,9 +130,7 @@ class EEGReportGenerator:
             PageBreak()
         )
 
-        # -------------------------
         # Topomaps
-        # -------------------------
 
         elements.append(
             Paragraph(
