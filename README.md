@@ -13,7 +13,6 @@ An interactive web application for loading, visualizing, and analyzing Electroen
 │   ├── signal_viewer.py    # Time-domain raw EEG signal browser
 │   ├── frequency.py        # Spectral analysis (PSD, spectrograms, band power)
 │   ├── topomap.py          # Topographical maps for spatial distribution of power
-│   ├── artifacts.py        # Artifact detection and filtering (ICA, ocular artifacts)
 │   └── report.py           # PDF/HTML export and report generation
 └── outputs/                # Generated reports, processed files, and downloads
 ```
