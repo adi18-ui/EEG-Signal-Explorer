@@ -38,3 +38,6 @@ An interactive web application for loading, visualizing, and analyzing Electroen
    ```bash
    streamlit run app.py
    ```
+
+## Live Website
+https://eeg-signal-explorer.streamlit.app/
