@@ -40,4 +40,5 @@ An interactive web application for loading, visualizing, and analyzing Electroen
    ```
 
 ## Live Website
-https://eeg-signal-explorer.streamlit.app/
+
+[EEG Signal Explorer](https://eeg-signal-explorer.streamlit.app/)
